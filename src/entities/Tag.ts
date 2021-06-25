@@ -1,32 +1,25 @@
 import {Entity, PrimaryColumn, Column, CreateDateColumn, UpdateDateColumn} from "typeorm";
-import { v4 as uuid } from "uuid";
 
-@Entity("users")
-class users {
+import { v4 as uuid} from "uuid";
+
+@Entity("tags")
+class Tag{
 
     @PrimaryColumn()
     readonly id: string;
-
-    @Column()
-    name: string;
-
-    @Column()
-    email: string;
-
-    @Column()
-    admin: boolean;
+    name:string;
 
     @CreateDateColumn()
     created_at: Date;
-
+    
     @UpdateDateColumn()
-    updated_at: Date;
+    update_at: Date;
 
     constructor(){
-        if(!this.id){
+        if(!this.id){ // Verificando se a requisição esta ou não preenchida
             this.id = uuid();
         }
     }
 }
 
-export { users };
+export { Tag }
