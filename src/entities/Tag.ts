@@ -7,13 +7,16 @@ class Tag{
 
     @PrimaryColumn()
     readonly id: string;
+
+    @Column()
     name:string;
+
 
     @CreateDateColumn()
     created_at: Date;
     
     @UpdateDateColumn()
-    update_at: Date;
+    updated_at: Date;
 
     constructor(){
         if(!this.id){ // Verificando se a requisição esta ou não preenchida
