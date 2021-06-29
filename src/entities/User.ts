@@ -21,6 +21,9 @@ class User {
   @Column()
   admin: boolean;
 
+  @Column()
+  password: string; // criando uma nova coluna para que aceite os padrões de senhas 
+
   @CreateDateColumn()
   created_at: Date;
 

@@ -1,0 +1,8 @@
+ JWT - Json Web Tokens
+
+ - Padrão de Tokens que conseguimos criar com algumas propriedades
+
+ - Permite fazer autenticações de usuarios utilizando um Tokens
+
+ - Não passar dados sensiveis dentro do JWT
+ 
