@@ -27,7 +27,7 @@ class CreateUserService {
       throw new Error("User already exists");
     }
 
-    const passwordHash = await hash(password, 8)
+    const passwordHash = await hash(password, 8) // passando a constante de senha criptografada 
 
     const user = usersRepository.create({
       name,
